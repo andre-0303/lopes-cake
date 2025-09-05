@@ -19,22 +19,21 @@ export default function ProductCard({
         alt={name}
         className="w-24 h-24 object-cover rounded-md"
       />
-
-      {/* Informações e botão */}
+     
       <div className="flex flex-col justify-between flex-1 h-24">
         <div>
-          <h2 className="text-md font-semibold text-start line-clamp-2">{name}</h2>
+          <h2 className="text-md font-semibold text-start line-clamp-2 leading-none">{name}</h2>
           <p className="text-pink-500 font-bold mt-1 text-start">
             R$ {price.toFixed(2)}
           </p>
         </div>
 
         <button
-          className="mt-2 bg-pink-500 text-white text-sm font-semibold py-1 px-3 rounded hover:bg-pink-600 transition w-full"
+          className="mt-2 bg-pink-500 text-white text-sm font-semibold py-1 w-[60px] rounded hover:bg-pink-600 transition"
           onClick={() => alert(`Adicionou ${name} ao carrinho!`)}
         >
-          <span className="flex items-center justify-center gap-2">
-            <ShoppingCart/>
+          <span className="flex items-center justify-center ">
+            <ShoppingCart />
           </span>
         </button>
       </div>
