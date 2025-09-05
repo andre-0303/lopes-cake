@@ -18,6 +18,7 @@ model Product {
   name          String
   price         Float
   imageUrl      String
+  category      String?
   orderProducts OrderProduct[]
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
