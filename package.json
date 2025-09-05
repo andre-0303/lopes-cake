@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node --loader ts-node/esm server.ts"
   },
   "prisma": {
     "seed": "node --loader ts-node/esm ./prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "lucide-react": "^0.542.0",
     "prisma": "6.2.1",
     "react": "^18.3.1",
@@ -22,6 +25,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
