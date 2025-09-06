@@ -1,14 +1,16 @@
 import { Outlet, NavLink } from "react-router-dom";
-import { House } from "lucide-react";
+import { Car, House } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
 import { Cookie } from "lucide-react";
+import CartNotification from "../components/CartNotification";
 
 export default function AppLayout() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       {/* Área principal */}
       <div className="flex-1">
-        <Outlet /> {/* Aqui entram as páginas das tabs */}
+        <Outlet /> 
+        <CartNotification/>
       </div>
 
       {/* Tabs fixas */}
